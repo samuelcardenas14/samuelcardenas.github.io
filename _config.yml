@@ -15,7 +15,7 @@ licencia: Todos el contenido de la web se encuentran bajo la licencia [Creative 
 
 # Configuración del tema
 remote_theme: mistakes/minimal-mistakes
-minimal_mistakes_skin: "neon" # "aqua", "contrast", "dark", "dirt", "neon", "mint", "sunrise", "default"
+minimal_mistakes_skin: "dark" # "aqua", "contrast", "dark", "dirt", "neon", "mint", "sunrise", "default"
 
 # No nos hace falta, pero con otra configuración de despliegue sí sería necesario.
 #baseurl: "" # the subpath of your site, e.g. /blog
