@@ -5,7 +5,7 @@
 # Configuración de la web. Se accede mediante {{ site.title }}, {{ site.email }}...
 # Se pueden crear las variables personalizadas que queramos y usarlas en los HTML.
 title: Apuntes CETI
-email: jobs.samuelcardenasmendoza14@gmail.com
+email: 
 description: >- # con esto ignoramos nuevas líneas hasta la siguiente variable.
   En este repositorio se almacenarán apuntes y recursos para el Curso de Especialización en
   Ciberseguridad en Entornos de las Tecnologías de la Información (CETI).
