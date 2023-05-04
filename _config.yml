@@ -1,0 +1,135 @@
+# En este archivo es donde se configura toda la web.
+# Por aspectos de seguridad, este archivo no se auto recarga con
+# "bundle exec jekyll serve --livereload"
+
+# Configuración de la web. Se accede mediante {{ site.title }}, {{ site.email }}...
+# Se pueden crear las variables personalizadas que queramos y usarlas en los HTML.
+title: Apuntes CETI
+email: jobs.samuelcardenasmendoza14@gmail.com
+description: >- # con esto ignoramos nuevas líneas hasta la siguiente variable.
+  En este repositorio se almacenarán apuntes y recursos para el Curso de Especialización en
+  Ciberseguridad en Entornos de las Tecnologías de la Información (CETI).
+twitter_username: sindefinir
+github_username: RafaeldelRio
+licencia: Todos el contenido de la web se encuentran bajo la licencia [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/)
+
+# Configuración del tema
+remote_theme: mistakes/minimal-mistakes
+minimal_mistakes_skin: "neon" # "aqua", "contrast", "dark", "dirt", "neon", "mint", "sunrise", "default"
+
+# No nos hace falta, pero con otra configuración de despliegue sí sería necesario.
+#baseurl: "" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Configuración del sitio web
+permalink: /:categories/:title/ # Cómo queremos las URL
+paginate: 5 # Cantidad de posts por página
+paginate_path: /page:num/ # Ruta de paginación
+timezone: ES # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+search: true
+# Se puede cambiar el proveedor de búsqueda a uno de pago, pero el actual funciona bien
+# search_provider: algolia
+
+# Las carpetas que queremos incluir en el procesado (a parte de _posts)
+include:
+  - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# El listado de plugins que usamos.
+# Si los usamos, debemos añadirlos como gemas en las dependencias
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+# Estas variables aparecen en la parte de la izquierda en la web.
+author:
+  name: "Samuel Cárdenas Mendoza"
+  avatar: "/assets/images/Captura de pantalla_2023-05-04_16-50-23.png"
+  bio: "Alumno de Ciberseguridad."
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://rafaeldelrio.github.io/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/RafaeldelRio/rafaeldelrio.github.io"
+
+# La configuración del footer de la web
+footer:
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://rafaeldelrio.github.io/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/RafaeldelRio/rafaeldelrio.github.io"
+
+# Configuraciones por defecto
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: false
+      comments: false # Quitamos los comentarios por ahora
+      share: false # Quitamos los enlaces a las redes sociales
+      related: false # Quitamos los relacionados
+      # No queremos ver los datos míos en todos los posts
+      author_profile: false
+      # En su lugar, metemos una sidebar
+      sidebar:
+        nav: "menu"
+
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      # No queremos ver los datos míos en todos los posts
+      author_profile: false
+      # En su lugar, metemos una sidebar
+      sidebar:
+        nav: "menu"
+
+category_archive:
+  type: liquid
+  path: /categories/
+
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# Esto nos permite comprimir y optimizar los html
+compress_html:
+  clippings: all
+  ignore:
+    envs: development # Deshabilitado en entorno de desarollo
+
+# Enlaces del camino seguido para llegar al artículo.
+breadcrumbs: true
